@@ -1,181 +1,241 @@
 describe("Opn Website Test Case", () => {
+  const opnWebsiteUrl = Cypress.config("opnWebsite")
+  const opnProUrl = Cypress.config("opnPro")
+  const opnMintUrl = Cypress.config("opnMint")
+  const opnTagUrl = Cypress.config("opnTag")
+  const acceptPaymentUrl = Cypress.config("acceptPayment")
+  const manageTransactionsUrl = Cypress.config("manageTransactions")
+  const sendPayoutsUrl = Cypress.config("sendPayouts")
+  const protectRevenueUrl = Cypress.config("protectRevenue")
+  const cardIssuingUrl = Cypress.config("cardIssuing")
+  const productsAcquiringUrl = Cypress.config("productsAcquiring")
+  const aboutUsUrl = Cypress.config("aboutUs")
+  const newsUrl = Cypress.config("news")
+  const getStartedUrl = Cypress.config("getStarted")
+  const pricingUrl = Cypress.config("pricing")
+  const contactUsUrl = Cypress.config("contactUs")
+  const contactSaleUrl = Cypress.config("contactSale")
+  const contactSupportUrl = Cypress.config("contactSupport")
+  const contactPartnershipUrl = Cypress.config("contactPartnership")
+  const digitalMenuUrl = Cypress.config("digitalMenu")
+
   it("Access to Opn website(Homepage)", () => {
-    cy.visit("https://opn-website.staging-internal.opn.dev/th-en/")
+    cy.visit(opnWebsiteUrl)
+    cy.url().should("eq", opnWebsiteUrl)
   })
 
   it("Access to Opn pro", () => {
-    cy.visit("https://opn-website.staging-internal.opn.dev/th-en/opn-pro/")
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to Opn mint", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/opn-mint/"
-    )
+    cy.visit(opnMintUrl)
+    cy.url().should("eq", opnMintUrl)
   })
 
   it("Access to Opn tag", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/opn-tag/"
-    )
+    cy.visit(opnTagUrl)
+    cy.url().should("eq", opnTagUrl)
   })
 
   it("Access to Accept payment", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/accept-payment/"
-    )
+    cy.visit(acceptPaymentUrl)
+    cy.url().should("eq", acceptPaymentUrl)
   })
 
   it("Access to Manage transactions", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/manage-transaction/"
-    )
+    cy.visit(manageTransactionsUrl)
+    cy.url().should("eq", manageTransactionsUrl)
   })
 
-  it("Access to Send payouts ", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/send-payouts/"
-    )
+  it("Access to Send payouts", () => {
+    cy.visit(sendPayoutsUrl)
+    cy.url().should("eq", sendPayoutsUrl)
   })
 
   it("Access to Manage-transaction/#protect-revenue ", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/manage-transaction/#protect-revenue"
-    )
+    cy.visit(protectRevenueUrl)
+    cy.url().should("eq", protectRevenueUrl)
   })
 
-  it("Access to Card issuing ", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/card-issuing/"
-    )
+  it("Access to Card issuing", () => {
+    cy.visit(cardIssuingUrl)
+    cy.url().should("eq", cardIssuingUrl)
   })
 
   it("Access to Acquiring", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/acquiring/"
-    )
+    cy.visit(productsAcquiringUrl)
+    cy.url().should("eq", productsAcquiringUrl)
   })
 
   it("Access to About us", () => {
-    cy.visit("https://opn-website.staging-internal.opn.dev/th-en/about-us/")
+    cy.visit(aboutUsUrl)
+    cy.url().should("eq", aboutUsUrl)
   })
 
   it("Access to News", () => {
-    cy.visit("https://opn-website.staging-internal.opn.dev/th-en/news/")
+    cy.visit(newsUrl)
+    cy.url().should("eq", newsUrl)
   })
 
   it("Access to Get started", () => {
-    cy.visit("https://opn-website.staging-internal.opn.dev/th-en/get-started/")
+    cy.visit(getStartedUrl)
+    cy.url().should("eq", getStartedUrl)
   })
 
   it("Access to Pricing", () => {
-    cy.visit("https://opn-website.staging-internal.opn.dev/th-en/pricing/")
+    cy.visit(pricingUrl)
+    cy.url().should("eq", pricingUrl)
   })
 
   it("Access to Contact us", () => {
-    cy.visit("https://opn-website.staging-internal.opn.dev/th-en/contact-us/")
+    cy.visit(contactUsUrl)
+    cy.url().should("eq", contactUsUrl)
   })
 
   it("Access to Contact sale", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/contact-us/sales/"
-    )
+    cy.visit(contactSaleUrl)
+    cy.url().should("eq", contactSaleUrl)
   })
 
   it("Access to Contact support", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/contact-us/support/"
-    )
+    cy.visit(contactSupportUrl)
+    cy.url().should("eq", contactSupportUrl)
   })
 
   it("Access to Contact partnership", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/contact-us/partnership/"
-    )
+    cy.visit(contactPartnershipUrl)
+    cy.url().should("eq", contactPartnershipUrl)
   })
 
   it("Access to Digital menu", () => {
-    cy.visit(
-      "https://opn-website.staging-internal.opn.dev/th-en/products/digital-menu/"
-    )
+    cy.visit(digitalMenuUrl)
+    cy.url().should("eq", digitalMenuUrl)
   })
 
   it("Access to Opn tag setup", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/docs/opn-tag-setup//"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to Opn stroe", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/products/opn-store/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to privacy", () => {
     cy.visit("https://opn-website.staging-internal.opn.dev/th-en/privacy/")
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to Terms", () => {
     cy.visit("https://opn-website.staging-internal.opn.dev/th-en/terms/")
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to OPN Pro Contact Sales Form", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/opn-pro/contact-us/sales/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to  Customer Success Story Page", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/voice-of-customers/featured-customer-24hrs-city-florist/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to  Customer Success Stories Main Page", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/voice-of-customers/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to  Blog Archived Page", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/blog/archived/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to  Blog-Post page", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/blog/payments/introducing-our-plugin-for-prestashop-as-a-new-way-to-connect-with-omise/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to  Blog Main Page", () => {
     cy.visit("https://opn-website.staging-internal.opn.dev/th-en/blog/")
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to PayFac Page", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/products/payfac/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to Payment Links Page", () => {
     cy.visit(
       "https://opn-website.staging-internal.opn.dev/th-en/products/payment-links/"
     )
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to New Privacy & Terms Page", () => {
     cy.visit("https://opn-website.staging-internal.opn.dev/th-en/legal/")
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it("Access to Wix page", () => {
     cy.visit("https://opn-website.staging-internal.opn.dev/th-en/wix/")
+
+    cy.visit(opnProUrl)
+    cy.url().should("eq", opnProUrl)
   })
 
   it.only("All buttons can be used and navigate to that page correctly", () => {
     //Contact us
     cy.visit("https://opn-website.staging-internal.opn.dev/th-en/")
+
+    cy.visit(opnProUrl)
+
     cy.get("body")
       .find("div > div > div")
       .find("header")
@@ -330,11 +390,11 @@ describe("Opn Website Test Case", () => {
     ).should("be.visible")
   })
 
-//   it("Remembers the language in which the website was last accessed", () => {
-//     cy.visit("https://opn-website.staging-internal.opn.dev/th-th/")
-//   })
+  //   it("Remembers the language in which the website was last accessed", () => {
+  //     cy.visit("https://opn-website.staging-internal.opn.dev/th-th/")
+  //   })
 
-//   it("Remembers the language in which the website was last accessed", () => {
-//     cy.visit("https://opn-website.staging-internal.opn.dev/th-th/")
-//   })
+  //   it("Remembers the language in which the website was last accessed", () => {
+  //     cy.visit("https://opn-website.staging-internal.opn.dev/th-th/")
+  //   })
 })
