@@ -1,9 +1,41 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require("cypress")
 
+const config = {
+  opnWebsite: "https://opn-website.staging-internal.opn.dev/",
+}
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+    opnWebsite: config.opnWebsite,
+    opnPro: `${config.opnWebsite}/th-en/opn-pro/`,
+    opnMint: `${config.opnWebsite}th-en/products/opn-mint/`,
+    opnTag: `${config.opnWebsite}th-en/products/opn-tag/`,
+    acceptPayment: `${config.opnWebsite}th-en/products/accept-payment/`,
+    manageTransactions: `${config.opnWebsite}th-en/products/manage-transaction/`,
+    sendPayouts: `${config.opnWebsite}th-en/products/send-payouts/`,
+    protectRevenue: `${config.opnWebsite}th-en/products/manage-transaction/#protect-revenue/`,
+    cardIssuing: `${config.opnWebsite}th-en/products/card-issuing/`,
+    productsAcquiring: `${config.opnWebsite}th-en/products/acquiring/`,
+    aboutUs: `${config.opnWebsite}th-en/about-us/`,
+    news: `${config.opnWebsite}th-en/news/`,
+    getStarted: `${config.opnWebsite}th-en/get-started/`,
+    pricing: `${config.opnWebsite}th-en/pricing/`,
+    contactUs: `${config.opnWebsite}th-en/contact-us/`,
+    contactSale: `${config.opnWebsite}th-en/contact-us/sales/`,
+    contactSupport: `${config.opnWebsite}th-en/contact-us/support/`,
+    contactPartnership: `${config.opnWebsite}th-en/contact-us/partnership/`,
+    opnTagSetup: `${config.opnWebsite}th-en/docs/opn-tag-setup/`,
+    digitalMenu: `${config.opnWebsite}th-en/products/digital-menu/`,
+    opnStroe: `${config.opnWebsite}th-en/products/opn-store/`,
+    privacy: `${config.opnWebsite}th-en/privacy/`,
+    terms: `${config.opnWebsite}th-en/terms/`,
+    contactSales: `${config.opnWebsite}th-en/opn-pro/contact-us/sales/`,
+    customerSuccessStory: `${config.opnWebsite}th-en/voice-of-customers/featured-customer-24hrs-city-florist/`,
+    customerSuccessStoriesMainPage: `${config.opnWebsite}th-en/voice-of-customers/`,
+    blogArchived: `${config.opnWebsite}th-en/blog/archived/`,
+    blogPost: `${config.opnWebsite}th-en/blog/payments/introducing-our-plugin-for-prestashop-as-a-new-way-to-connect-with-omise/`,
+    blogMain: `${config.opnWebsite}th-en/blog/`,
+    paymentLinks: `${config.opnWebsite}th-en/products/payment-links/`,
+    newPrivacyAndTerms: `${config.opnWebsite}th-en/legal/`,
+    wix: `${config.opnWebsite}th-en/wix/`,
   },
-});
+})
